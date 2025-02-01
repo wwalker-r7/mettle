@@ -96,7 +96,7 @@ void stack_setup(size_t *stack_base, int argc, char **argv, char **env, size_t *
 	dprint("  0x%08zx\n", stack_base[1 + ii]);
 
 	for (ii = 0; env[ii]; ii++) {
-		stack_base[1+ argc + ii + 1] = (size_t)env[ii];
+		stack_base[1 + argc + ii + 1] = (size_t)env[ii];
 		dprint("  0x%08zx\n", stack_base[1 + argc + ii + 1]);
 	}
 	stack_base[1 + argc + ii + 1] = 0;
