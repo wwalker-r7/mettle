@@ -108,7 +108,6 @@ void stack_setup(size_t *stack_base, int argc, char **argv, char **env, size_t *
 		for (ii = 0; auxv[ii]; ii += 2) {
  			auxv_base[ii] = auxv[ii];
  			auxv_base[ii + 1] = auxv[ii + 1];
-			auxv_base[ii] = auxv[ii];
 		}
 		auxv_base[ii] = AT_NULL;
 		auxv_base[ii + 1] = 0;
